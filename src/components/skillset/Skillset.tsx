@@ -200,6 +200,31 @@ const Skillset = () => {
                   <Icon size={64} className="opacity-50 text-white p-1" />
                 </Avatar>
               ))}
+              {centerSkills.map((Icon: IconType, index) => (
+                <Avatar
+                  key={index}
+                  variant="rounded"
+                  sx={{
+                    width: "2.5rem",
+                    height: "2.5rem",
+                    backgroundColor: "#33333380",
+                    "@media (min-width: 768px)": {
+                      width: "3rem",
+                      height: "3rem",
+                    },
+                    "@media (min-width: 990px)": {
+                      width: "4rem",
+                      height: "4rem",
+                    },
+                    "@media (min-width: 1366px)": {
+                      width: "5rem",
+                      height: "5rem",
+                    },
+                  }}
+                >
+                  <Icon size={64} className="opacity-50 text-white p-1" />
+                </Avatar>
+              ))}
             </div>
           </div>
           <div className="w-full flex flex-col gap-4 overflow-hidden">
