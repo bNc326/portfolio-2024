@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Fira Code", monospace;
+}
+main::before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  background-image: url(./assets/hero.jpg);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.reference-bg {
+  background-size: cover;
+  background-image: url(./assets/Wave\ Line.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+}
+
+.contact-bg {
+  background-size: cover;
+  background-image: url(./assets/contact-wave-mobile.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 990px) {
+  .contact-bg {
+    background-image: url(./assets/contact-wave.svg);
+  }
+}
+
+.hideScrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}
