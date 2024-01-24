@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, CircularProgress, TextField, IconButton } from "@mui/material";
+import { Button, CircularProgress, TextField, IconButton, Chip } from "@mui/material";
 import { SiOpenai } from "react-icons/si";
 import { OpenAIContext, OpenAIContextModel } from "../../context/OpenaiContext";
 import Lottie from "lottie-react";
@@ -99,7 +99,7 @@ const Hero = () => {
                   >
                     <span className="px-4">Generált szöveg megtekintése</span>
                   </Button>
-                  <span className="text-desc">Powered by chatGPT</span>
+                  <span className="text-desc">Powered by ChatGPT <Chip label="beta" color="warning" variant="outlined"/></span>
                 </div>
               ) : (
                 <Controller
@@ -131,7 +131,7 @@ const Hero = () => {
                         errors.message?.message ? (
                           errors.message.message
                         ) : (
-                          <span>Powered by chatGPT</span>
+                          <span>Powered by ChatGPT <Chip label="beta" color="warning" variant="outlined"/></span>
                         )
                       }
                     />
