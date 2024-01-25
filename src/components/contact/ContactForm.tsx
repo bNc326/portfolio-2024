@@ -5,15 +5,9 @@ import {
   Button,
   IconButton,
   CircularProgress,
+  Chip,
 } from "@mui/material";
-import {
-  MdPerson,
-  MdEmail,
-  MdPhone,
-  MdSubject,
-  MdClose,
-  MdSend,
-} from "react-icons/md";
+import { MdEmail, MdPhone, MdMap, MdClose, MdSend } from "react-icons/md";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import z from "zod";
@@ -239,6 +233,23 @@ const ContactForm = () => {
       >
         Küldés
       </Button>
+      <div className="w-full flex flex-wrap gap-4">
+        <Chip
+          variant="outlined"
+          icon={<MdMap size={20} />}
+          label="8137 Mezőkomárom"
+        />
+        <Chip
+          variant="outlined"
+          icon={<MdPhone size={20} />}
+          label="06/30 6619438"
+        />
+        <Chip
+          variant="outlined"
+          icon={<MdEmail size={20} />}
+          label="kissbence326@gmail.com"
+        />
+      </div>
     </form>
   );
 };
