@@ -4,11 +4,16 @@ import ReferenceCard from "./ReferenceCard";
 import { Reference as ReferenceModel } from "../../model/Reference";
 import * as BiIcons from "react-icons/bi";
 import * as MdIcons from "react-icons/md";
+import * as RiIcons from "react-icons/ri";
+import * as Hi2Icons from "react-icons/hi2";
 import {
   SiExpress,
   SiSocketdotio,
   SiMui,
   SiMicrosoftazure,
+  SiRedis,
+  SiNextdotjs,
+  SiMapbox,
 } from "react-icons/si";
 
 import Amelto from "../../assets/references/amelto_mockup.png";
@@ -19,9 +24,63 @@ import GuestAdmin from "../../assets/references/admin_mockup.png";
 import GuestAdmin2 from "../../assets/references/admin2_mockup.png";
 import Webshop from "../../assets/references/webshop_mockup.png";
 import Webshop2 from "../../assets/references/webshop2_mockup.png";
+import Zold from "../../assets/references/zold_orom_vendeghaz_mockup.png";
+import Zold2 from "../../assets/references/zold_orom_vendeghaz_mockup_2.png";
 
 const Reference = () => {
   const references: ReferenceModel[] = [
+    {
+      title: "Zöld orom vendégház",
+      subHeader: "Full-Stack",
+      jobs: [
+        "Weboldal tervezés, fejlesztés",
+        "Api tervezés, fejlesztés",
+        "Admin felület fejlesztés (working progress)",
+        "Foglalás rendszer, kupon rendszer",
+        "Automata email marketing rendszer (working progress)",
+      ],
+      stacks: [
+        { label: "NextJs", icon: SiNextdotjs },
+        { label: "Typescript", icon: BiIcons.BiLogoTypescript },
+        { label: "MongoDB", icon: BiIcons.BiLogoMongodb },
+        { label: "VPS(ubuntu)", icon: RiIcons.RiUbuntuFill },
+        { label: "Redis", icon: SiRedis },
+        { label: "BullMQ (queue system)", icon: Hi2Icons.HiQueueList },
+        { label: "HTML", icon: BiIcons.BiLogoHtml5 },
+        { label: "CSS", icon: BiIcons.BiLogoCss3 },
+        { label: "TailwindCSS", icon: BiIcons.BiLogoTailwindCss },
+        { label: "Mapbox", icon: SiMapbox },
+        { label: "MUI", icon: SiMui },
+      ],
+      img: {
+        src: Zold,
+        alt: "Zöld orom vendégház mockup",
+      },
+      img2: {
+        src: Zold2,
+        alt: "Zöld orom vendégház mockup",
+      },
+      liveDemo: "https://zoldoromkerka.hu",
+      
+      // time: [
+      //   {
+      //     content: {
+      //       title: "Szerver rekatorálás",
+      //       desc: "A teljes szervert áttírtam typescriptre és a korábbi EmailJS emailező szoftvert lecseréltem saját email service-re",
+      //     },
+      //     oppositeContent: { title: "2024 Jan" },
+      //     icon: MdIcons.MdRefresh,
+      //   },
+      //   {
+      //     content: {
+      //       title: "Szerver költöztetés",
+      //       desc: "A korábbi cpanel-es szervert átköltöztettem egy megbízhatóbb Azure VPS-re",
+      //     },
+      //     oppositeContent: { title: "2023 Nov" },
+      //     icon: MdIcons.MdStorage,
+      //   },
+      // ],
+    },
     {
       title: "Kiss és Társa sírkő",
       subHeader: "Full-Stack",
@@ -154,7 +213,6 @@ const Reference = () => {
 
   return (
     <section className="w-full h-full relative reference-bg flex flex-col items-center">
-        
       <Title title="referenciák" bgTitle="Projects" />
       <div className="w-11/12 max-w-[1536px] flex flex-wrap gap-4 py-8">
         {references.map((reference, index) => (
